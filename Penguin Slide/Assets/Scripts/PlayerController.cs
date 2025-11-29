@@ -1,3 +1,4 @@
+using System;
 using System.Xml.Serialization;
 using Unity.Mathematics;
 using UnityEngine;
@@ -70,6 +71,11 @@ public class PlayerController : MonoBehaviour
         if(wallHit.collider != null)
         {
             Vector3 wallPosition = wallHit.point;
+
+
+            wallPosition.x = MathF.Round(wallPosition.x * 2.0f) / 2.0f;
+            wallPosition.y = MathF.Round(wallPosition.y * 2.0f) / 2.0f;   
+
             if (wallPosition.x % 1 == 0 && direction.x == -1)
             {
                 wallPosition.x--;
@@ -78,13 +84,17 @@ public class PlayerController : MonoBehaviour
             {
                 wallPosition.y--;
             }
-            wallPosition.x = math.floor(wallPosition.x) + 0.5f;
-            wallPosition.y = math.floor(wallPosition.y) + 0.5f;
+            wallPosition.x = MathF.Floor(wallPosition.x) + 0.5f;
+            wallPosition.y = MathF.Floor(wallPosition.y) + 0.5f;
             targetTile = wallPosition - direction;
         }
         if (floorHit.collider != null)
         {
             Vector3 floorPosition = floorHit.point;
+
+            floorPosition.x = MathF.Round(floorPosition.x * 2.0f) / 2.0f;
+            floorPosition.y = MathF.Round(floorPosition.y * 2.0f) / 2.0f;   
+
             if (floorPosition.x % 1 == 0 && direction.x == -1)
             {
                 floorPosition.x--;
@@ -93,8 +103,8 @@ public class PlayerController : MonoBehaviour
             {
                 floorPosition.y--;
             }
-            floorPosition.x = math.floor(floorPosition.x) + 0.5f;
-            floorPosition.y = math.floor(floorPosition.y) + 0.5f;
+            floorPosition.x = MathF.Floor(floorPosition.x) + 0.5f;
+            floorPosition.y = MathF.Floor(floorPosition.y) + 0.5f;
             if ((floorPosition-transform.position).magnitude < (targetTile-transform.position).magnitude)
             {
                 targetTile = floorPosition;
