@@ -4,7 +4,7 @@ public class GameManager : MonoBehaviour
 {
     
     static GameManager instance = null;
-    public GameManager Instance {get {return instance;}}
+    static public GameManager Instance {get {return instance;}}
     
     void Awake()
     {
