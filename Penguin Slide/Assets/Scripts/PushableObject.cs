@@ -1,51 +1,25 @@
-using System;
-using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.InputSystem;
-
-public class PlayerController : MonoBehaviour
+using System;
+public class PushableObject : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Transform destination;
-
-    private PlayerInput input = null;
-    private InputAction moveAction = null;
-
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
-
+    
     private PushableObject pushableAtDestination = null;
     Vector3 pushDirection = Vector3.zero;
 
     void Awake()
     {
         destination.parent = null;
-        input = new PlayerInput();
-        moveAction = input.Player.Move;
-    }
-
-    void OnEnable()
-    {
-        input.Enable();
-        moveAction.Enable();
-    }
-
-    void OnDisable()
-    {
-        input.Disable();
-        moveAction.Disable();
     }
 
     void Update()
     {
-        Vector2 moveInput = moveAction.ReadValue<Vector2>();
-        if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
-        {
-            ChangeDestination(moveInput);
-        }
         transform.position = Vector3.MoveTowards(transform.position,destination.position,moveSpeed*Time.deltaTime);
         isMoving = !(transform.position == destination.position);
-        if (!IsMoving)
+        if (!isMoving)
         {
             if(pushableAtDestination != null && pushDirection.magnitude == 1)
             {
@@ -54,24 +28,25 @@ public class PlayerController : MonoBehaviour
                 pushDirection = Vector3.zero;
             }
         }
+       
     }
 
-    void ChangeDestination(Vector2 moveInput)
+    public void ChangeDestination(Vector3 pushDirection)
     {
-        if (moveInput.x == 1 || moveInput.x == -1)
+        if (pushDirection.x == 1 || pushDirection.x == -1)
         {
             Vector3 direction = Vector3.zero;
-            direction.x += moveInput.x;
+            direction.x += pushDirection.x;
             destination.position = GetTravelDistance(direction);
         }
-        else if (moveInput.y == 1 || moveInput.y == -1)
+        else if (pushDirection.y == 1 || pushDirection.y == -1)
         {
             Vector3 direction = Vector3.zero;
-            direction.y += moveInput.y;
+            direction.y += pushDirection.y;
             destination.position = GetTravelDistance(direction);
         }
     }
-    
+
     Vector3 GetTravelDistance(Vector3 direction)
     {
         const float maxRaycastDistance = 50.0f;
@@ -83,7 +58,6 @@ public class PlayerController : MonoBehaviour
         if(wallHit.collider != null)
         {
             Vector3 wallPosition = wallHit.point;
-
 
             wallPosition.x = MathF.Round(wallPosition.x * 2.0f) / 2.0f;
             wallPosition.y = MathF.Round(wallPosition.y * 2.0f) / 2.0f;   
@@ -132,4 +106,5 @@ public class PlayerController : MonoBehaviour
 
         return targetTile;
     }
+
 }
