@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SimpleTileMovement : MonoBehaviour
+public class ControllerTest : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Animator animator;
@@ -9,6 +9,7 @@ public class SimpleTileMovement : MonoBehaviour
     private PlayerInput input;
     private InputAction moveAction;
 
+    
     private Vector3 targetPosition;
     private bool isMoving = false;
 
@@ -21,6 +22,8 @@ public class SimpleTileMovement : MonoBehaviour
         animator = GetComponent<Animator>();
 
         targetPosition = transform.position;
+
+        lastMoveInput = new Vector2(0f, -1f); // Default facing down
 
         // Initialize animator to idle
         animator.SetFloat("MoveX", 0f);
