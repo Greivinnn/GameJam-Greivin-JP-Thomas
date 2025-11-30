@@ -91,7 +91,7 @@ public class ControllerTest : MonoBehaviour
             }
         }
 
-        // Update animator
+        // ALWAYS update animator with the last direction (removed the conditional)
         animator.SetFloat("MoveX", lastMoveInput.x);
         animator.SetFloat("MoveY", lastMoveInput.y);
         animator.SetBool("IsMoving", isMoving);
