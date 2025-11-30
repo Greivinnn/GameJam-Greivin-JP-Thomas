@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
 
+    private bool movingToWater = false;
+
+    private bool isAlive = true;
+
     private PushableObject pushableAtDestination = null;
     Vector3 pushDirection = Vector3.zero;
 
@@ -38,20 +42,29 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Vector2 moveInput = moveAction.ReadValue<Vector2>();
-        if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
+        if (isAlive)
         {
-            ChangeDestination(moveInput);
-        }
-        transform.position = Vector3.MoveTowards(transform.position,destination.position,moveSpeed*Time.deltaTime);
-        isMoving = !(transform.position == destination.position);
-        if (!IsMoving)
-        {
-            if(pushableAtDestination != null && pushDirection.magnitude == 1)
+            Vector2 moveInput = moveAction.ReadValue<Vector2>();
+            if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
             {
-                pushableAtDestination.ChangeDestination(pushDirection);
-                pushableAtDestination = null;
-                pushDirection = Vector3.zero;
+                ChangeDestination(moveInput);
+            }
+            transform.position = Vector3.MoveTowards(transform.position,destination.position,moveSpeed*Time.deltaTime);
+            isMoving = !(transform.position == destination.position);
+            if (!IsMoving)
+            {
+                if(pushableAtDestination != null && pushDirection.magnitude == 1)
+                {
+                    pushableAtDestination.ChangeDestination(pushDirection);
+                    pushableAtDestination = null;
+                    pushDirection = Vector3.zero;
+                }
+                if (movingToWater)
+                {
+                    movingToWater = false;
+                    Debug.Log("You died");
+                    isAlive = false;
+                }
             }
         }
     }
@@ -79,7 +92,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 rayOrigin = transform.position + direction;
         RaycastHit2D wallHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Walls"));
-        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor"));
+        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor", "Water"));
         if(wallHit.collider != null)
         {
             Vector3 wallPosition = wallHit.point;
@@ -127,6 +140,10 @@ public class PlayerController : MonoBehaviour
                 targetTile = floorPosition;
                 pushableAtDestination = null;
                 pushDirection = Vector3.zero;
+                if (floorHit.collider.tag == "Water" && targetTile != transform.position)
+                {
+                    movingToWater = true;
+                }
             }
         }
 

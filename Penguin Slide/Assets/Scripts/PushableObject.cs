@@ -6,9 +6,13 @@ public class PushableObject : MonoBehaviour
     [SerializeField] private Transform destination;
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
+
+    private bool movingToWater = false;
     
     private PushableObject pushableAtDestination = null;
     Vector3 pushDirection = Vector3.zero;
+
+    [SerializeField]private Sprite sunkSprite;
 
     void Awake()
     {
@@ -26,6 +30,12 @@ public class PushableObject : MonoBehaviour
                 pushableAtDestination.ChangeDestination(pushDirection);
                 pushableAtDestination = null;
                 pushDirection = Vector3.zero;
+            }
+            if (movingToWater)
+            {
+                movingToWater = false;
+                tag = "Untagged";
+                GetComponent<SpriteRenderer>().sprite = sunkSprite;
             }
         }
        
@@ -54,7 +64,7 @@ public class PushableObject : MonoBehaviour
 
         Vector3 rayOrigin = transform.position + direction;
         RaycastHit2D wallHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Walls"));
-        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor"));
+        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor", "Water"));
         if(wallHit.collider != null)
         {
             Vector3 wallPosition = wallHit.point;
@@ -101,6 +111,10 @@ public class PushableObject : MonoBehaviour
                 targetTile = floorPosition;
                 pushableAtDestination = null;
                 pushDirection = Vector3.zero;
+                if (floorHit.collider.tag == "Water" && targetTile != transform.position)
+                {
+                    movingToWater = true;
+                }
             }
         }
 
