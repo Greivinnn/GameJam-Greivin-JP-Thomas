@@ -7,8 +7,10 @@ public class GameManager : MonoBehaviour
     static GameManager instance = null;
     static public GameManager Instance {get {return instance;}}
     
-    [SerializeField] private GameObject pushablesParent;
-    private List<PushableObject> pushableObjects = new List<PushableObject>();
+    //empty gameobject which all pushable objects in the scene should be a child of
+    [SerializeField] private GameObject pushablesParent; 
+    //list of all pushable objects in the scene
+    private List<PushableObject> pushableObjects = new List<PushableObject>(); 
 
     void Awake()
     {
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //returns true if any pushable objects in the scene are moving
     public bool CheckMovingObjects()
     {
         bool isMoving = false;

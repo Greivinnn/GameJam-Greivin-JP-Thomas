@@ -34,13 +34,14 @@ public class PushableObject : MonoBehaviour
             if (movingToWater)
             {
                 movingToWater = false;
-                tag = "Untagged";
+                tag = "Untagged"; //removes the "Pushable" tag to make it function as a regular wall
                 GetComponent<SpriteRenderer>().sprite = sunkSprite;
             }
         }
        
     }
 
+    //updates the destination point based on the given direction
     public void ChangeDestination(Vector3 pushDirection)
     {
         if (pushDirection.x == 1 || pushDirection.x == -1)
@@ -57,6 +58,7 @@ public class PushableObject : MonoBehaviour
         }
     }
 
+    //finds and returns the position that should be moved to in the given direction
     Vector3 GetTravelDistance(Vector3 direction)
     {
         const float maxRaycastDistance = 50.0f;
