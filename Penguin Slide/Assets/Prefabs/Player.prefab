@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213398513427402352}
   - component: {fileID: 5134646378619976927}
+  - component: {fileID: 4055898915586771787}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -48,6 +49,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   destination: {fileID: 1264693708819728300}
+--- !u!95 &4055898915586771787
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6593262358492543218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d8cd803c3581bb48b0332d53d0dabf9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7119985660417714011
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,9 +149,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.8490566, g: 0.08810966, b: 0.08810966, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 3536108065833814191, guid: 14956c262db38354db9a63121915d34a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

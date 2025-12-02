@@ -1921,6 +1921,84 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!1 &573992297 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6593262358492543218, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
+  m_PrefabInstance: {fileID: 8636349151027300767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &573992300
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573992297}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.75, y: 0.7}
+  m_EdgeRadius: 0
+--- !u!50 &573992301
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573992297}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &611664887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,7 +3602,7 @@ Tilemap:
       - {fileID: 1287612312, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
       - {fileID: 2104215539, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
       - {fileID: -1636868567, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
-      m_AnimationSpeed: 8.285341
+      m_AnimationSpeed: 8.238962
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -4584,26 +4662,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1608916155684503894, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3536108065833814191, guid: 14956c262db38354db9a63121915d34a, type: 3}
-    - target: {fileID: 1608916155684503894, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608916155684503894, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608916155684503894, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1608916155684503894, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6338268444385498868, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.25
@@ -4612,10 +4670,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7119985660417714011, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6593262358492543218, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 573992300}
+    - targetCorrespondingSourceObject: {fileID: 6593262358492543218, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 573992301}
   m_SourcePrefab: {fileID: 100100000, guid: f56d0d7bd83a80e42927803d30d5895c, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

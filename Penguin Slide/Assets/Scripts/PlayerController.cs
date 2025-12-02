@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,9 +11,16 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInput input = null;
     private InputAction moveAction = null;
+    private Animator animator;
+
+    private bool isOnIce = false;
+    private List<Collider2D> floorsInContact = new List<Collider2D>();
+
 
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
+
+    private bool isPushing = false;
 
     private bool movingToWater = false;  //makes the player die when they reach the destination
 
@@ -28,7 +36,15 @@ public class PlayerController : MonoBehaviour
     {
         destination.parent = null;
         input = new PlayerInput();
+        animator = GetComponent<Animator>();
         moveAction = input.Player.Move;
+
+        // Initialize animator to idle
+        animator.SetFloat("MoveX", 0f);
+        animator.SetFloat("MoveY", -1f);
+        animator.SetBool("IsMoving", false);
+        animator.SetBool("IsPushing", false);
+        animator.SetBool("IsOnIce", false);
     }
 
     void OnEnable()
@@ -68,6 +84,8 @@ public class PlayerController : MonoBehaviour
                     pushableAtDestination.ChangeDestination(pushDirection);
                     pushableAtDestination = null;
                     pushDirection = Vector3.zero;
+                    isPushing = true;
+                    
                 }
                 if (movingToWater)
                 {
@@ -77,6 +95,12 @@ public class PlayerController : MonoBehaviour
                     isAlive = false;
                 }
             }
+            animator.SetBool("IsMoving", isMoving);
+            animator.SetBool("IsPushing", isPushing);
+            animator.SetBool("IsOnIce", isOnIce);
+            animator.SetFloat("MoveX",spriteDirection.x);
+            animator.SetFloat("MoveY",spriteDirection.y);
+            isPushing = false;
         }
     }
 
@@ -180,5 +204,27 @@ public class PlayerController : MonoBehaviour
         }
 
         return targetTile;
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            Debug.Log("enter");
+            floorsInContact.Add(collision);
+            isOnIce = false;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            Debug.Log("exit");
+            floorsInContact.Remove(collision);
+            if(floorsInContact.Count == 0)
+            {
+                isOnIce = true;
+            }
+        }
     }
 }
