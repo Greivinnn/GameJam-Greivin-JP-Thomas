@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveY", -1f);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
-        animator.SetBool("IsOnIce", false);
+        //animator.SetBool("IsOnIce", false);
     }
 
     void OnEnable()
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
             }
             animator.SetBool("IsMoving", isMoving);
             animator.SetBool("IsPushing", isPushing);
-            animator.SetBool("IsOnIce", isOnIce);
+            //animator.SetBool("IsOnIce", isOnIce);
             animator.SetFloat("MoveX",spriteDirection.x);
             animator.SetFloat("MoveY",spriteDirection.y);
             isPushing = false;
@@ -206,11 +206,16 @@ public class PlayerController : MonoBehaviour
         return targetTile;
     }
 
+    public void OnEnemyHit()
+    {
+        Debug.Log("You died");
+        isAlive = false;
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 6)
         {
-            Debug.Log("enter");
             floorsInContact.Add(collision);
             isOnIce = false;
         }
@@ -219,7 +224,6 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.layer == 6)
         {
-            Debug.Log("exit");
             floorsInContact.Remove(collision);
             if(floorsInContact.Count == 0)
             {
