@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
                 if (movingToWater)
                 {
                     //this code runs when the player falls in water
+                    animator.SetBool("IsFalling", true);
                     movingToWater = false;
                     Debug.Log("You died");
                     isAlive = false;
@@ -210,6 +211,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("You died");
         isAlive = false;
+        animator.SetBool("IsAttacked", true);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
