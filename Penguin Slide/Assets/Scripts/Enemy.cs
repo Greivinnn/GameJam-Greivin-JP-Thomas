@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] float sightDistance = 20.0f;
     [SerializeField] PlayerController player = null;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Vector3 sightPositionR;
     Vector3 sightPositionL;
     Vector3 sightPositionU;
@@ -20,6 +21,12 @@ public class Enemy : MonoBehaviour
     Animator animator = null;
     void Awake()
     {
+=======
+<<<<<<< HEAD
+    Animator animator = null;
+    void Awake()
+    {
+>>>>>>> Stashed changes
         animator = GetComponent<Animator>();
 =======
     Vector3 sightPositionR;
@@ -33,6 +40,9 @@ public class Enemy : MonoBehaviour
     {
         lineRenderer = GetComponent<LineRenderer>();
 >>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     }
@@ -40,12 +50,18 @@ public class Enemy : MonoBehaviour
     void Update()
     {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
         if (CheckSightLines())
         {
             player.OnEnemyHit();
             animator.SetBool("IsAttacking", true);
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         if (isAlive)
@@ -56,6 +72,10 @@ public class Enemy : MonoBehaviour
             }
             UpdateLineRenderer();
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
+>>>>>>> Stashed changes
 =======
 >>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
 >>>>>>> Stashed changes
