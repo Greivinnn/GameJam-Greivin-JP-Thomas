@@ -10,11 +10,12 @@ public class Enemy : MonoBehaviour
     Vector3 sightPositionD;
     LineRenderer lineRenderer = null;
     bool isAlive = true;
+    Animator animator = null;
 
     void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
-
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,9 +25,11 @@ public class Enemy : MonoBehaviour
             if (CheckSightLines())
             {
                 player.OnEnemyHit();
+                animator.SetBool("isAttacking", true);
             }
             UpdateLineRenderer();
         }
+
     }
     bool CheckSightLines()
     {
@@ -88,5 +91,6 @@ public class Enemy : MonoBehaviour
         isAlive = false;
         Debug.Log("Enemy died");
         GetComponent<BoxCollider2D>().enabled = false;
+        animator.SetBool("IsAlive", true);
     }
 }
