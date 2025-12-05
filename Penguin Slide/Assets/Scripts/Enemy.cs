@@ -4,6 +4,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float sightDistance = 20.0f;
     [SerializeField] PlayerController player = null;
+<<<<<<< Updated upstream
     Vector3 sightPositionR;
     Vector3 sightPositionL;
     Vector3 sightPositionU;
@@ -14,11 +15,39 @@ public class Enemy : MonoBehaviour
     void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+=======
+<<<<<<< HEAD
+    Animator animator = null;
+    void Awake()
+    {
+        animator = GetComponent<Animator>();
+=======
+    Vector3 sightPositionR;
+    Vector3 sightPositionL;
+    Vector3 sightPositionU;
+    Vector3 sightPositionD;
+    LineRenderer lineRenderer = null;
+    bool isAlive = true;
+
+    void Awake()
+    {
+        lineRenderer = GetComponent<LineRenderer>();
+>>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
+>>>>>>> Stashed changes
 
     }
 
     void Update()
     {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        if (CheckSightLines())
+        {
+            player.OnEnemyHit();
+            animator.SetBool("IsAttacking", true);
+=======
+>>>>>>> Stashed changes
         if (isAlive)
         {   
             if (CheckSightLines())
@@ -26,6 +55,10 @@ public class Enemy : MonoBehaviour
                 player.OnEnemyHit();
             }
             UpdateLineRenderer();
+<<<<<<< Updated upstream
+=======
+>>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
+>>>>>>> Stashed changes
         }
     }
     bool CheckSightLines()

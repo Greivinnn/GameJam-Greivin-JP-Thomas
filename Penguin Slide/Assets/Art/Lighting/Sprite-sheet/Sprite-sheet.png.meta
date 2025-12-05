@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: b947df3a855e37b49b524f7b7d8b91eb
+guid: cf620e64e2c9ec340a4f21806ac7f6a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 309017972509937542
-    second: Pitfall_0
+      213: -4111964075149863302
+    second: Sprite-sheet_0
   - first:
-      213: 1754573103291082702
-    second: Pitfall_1
+      213: 366455611992627334
+    second: Sprite-sheet_1
   - first:
-      213: 8197580562454249033
-    second: Pitfall_2
+      213: 344307399868531090
+    second: Sprite-sheet_2
   - first:
-      213: 2004785483242073980
-    second: Pitfall_3
-  - first:
-      213: -6682131663059509994
-    second: Pitfall_4
+      213: -895371444194891223
+    second: Sprite-sheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,155 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pitfall_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68f8aa0753ad94400800000000000000
-      internalID: 309017972509937542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_1
+      name: Sprite-sheet_0
       rect:
         serializedVersion: 2
         x: 24
-        y: 0
-        width: 24
-        height: 24
+        y: 43
+        width: 213
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec7ae1af0fe795810800000000000000
-      internalID: 1754573103291082702
+      spriteID: a765683b57e5fe6c0800000000000000
+      internalID: -4111964075149863302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pitfall_2
+      name: Sprite-sheet_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 24
-        height: 24
+        x: 280
+        y: 43
+        width: 213
+        height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94e7bb2c618a3c170800000000000000
-      internalID: 8197580562454249033
+      spriteID: 688d4c20079e51500800000000000000
+      internalID: 366455611992627334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pitfall_3
+      name: Sprite-sheet_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
+        x: 540
+        y: 40
+        width: 205
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7fe08376cd62db10800000000000000
-      internalID: 2004785483242073980
+      spriteID: 291c3b681c937c400800000000000000
+      internalID: 344307399868531090
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pitfall_4
+      name: Sprite-sheet_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 24
+        x: 794
+        y: 40
+        width: 207
+        height: 57
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 61d92f8e7ac4443a0800000000000000
-      internalID: -6682131663059509994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_5
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0752e8cae006850438e53739bccf85ab
-      internalID: -1236906070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_6
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2247bcb2d47fbb640abbbb2f3e25e0fc
-      internalID: -487121716
+      spriteID: 92a2cb65a600393f0800000000000000
+      internalID: -895371444194891223
       vertices: []
       indices: 
       edges: []
@@ -269,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 53733eaaf4daac145a44d1275db1792a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -277,17 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Pitfall_0: 309017972509937542
-      Pitfall_1: 1754573103291082702
-      Pitfall_2: 8197580562454249033
-      Pitfall_3: 2004785483242073980
-      Pitfall_4: -6682131663059509994
-      Pitfall_5: -1236906070
-      Pitfall_6: -487121716
+      Sprite-sheet_0: -4111964075149863302
+      Sprite-sheet_1: 366455611992627334
+      Sprite-sheet_2: 344307399868531090
+      Sprite-sheet_3: -895371444194891223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

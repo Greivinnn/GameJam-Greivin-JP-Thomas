@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: b947df3a855e37b49b524f7b7d8b91eb
+guid: cd474f66201faa7468be375be87220ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 309017972509937542
-    second: Pitfall_0
+      213: 7307671387638985849
+    second: elec_drone_charging_0
   - first:
-      213: 1754573103291082702
-    second: Pitfall_1
+      213: -437955401072660405
+    second: elec_drone_charging_1
   - first:
-      213: 8197580562454249033
-    second: Pitfall_2
+      213: 1581220881967891871
+    second: elec_drone_charging_2
   - first:
-      213: 2004785483242073980
-    second: Pitfall_3
-  - first:
-      213: -6682131663059509994
-    second: Pitfall_4
+      213: -5853666915007018352
+    second: elec_drone_charging_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,155 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Pitfall_0
+      name: elec_drone_charging_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 24
-        height: 24
+        y: 10
+        width: 17
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68f8aa0753ad94400800000000000000
-      internalID: 309017972509937542
+      spriteID: 974f18bc8601a6560800000000000000
+      internalID: 7307671387638985849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pitfall_1
+      name: elec_drone_charging_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 24
-        height: 24
+        x: 16
+        y: 10
+        width: 17
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec7ae1af0fe795810800000000000000
-      internalID: 1754573103291082702
+      spriteID: b40b99312e11ce9f0800000000000000
+      internalID: -437955401072660405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pitfall_2
+      name: elec_drone_charging_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 10
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f954025b300a1f510800000000000000
+      internalID: 1581220881967891871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: elec_drone_charging_3
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
-        width: 24
-        height: 24
+        y: 10
+        width: 16
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94e7bb2c618a3c170800000000000000
-      internalID: 8197580562454249033
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7fe08376cd62db10800000000000000
-      internalID: 2004785483242073980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 61d92f8e7ac4443a0800000000000000
-      internalID: -6682131663059509994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_5
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0752e8cae006850438e53739bccf85ab
-      internalID: -1236906070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Pitfall_6
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2247bcb2d47fbb640abbbb2f3e25e0fc
-      internalID: -487121716
+      spriteID: 09acc8174f893cea0800000000000000
+      internalID: -5853666915007018352
       vertices: []
       indices: 
       edges: []
@@ -269,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 53733eaaf4daac145a44d1275db1792a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -277,17 +208,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      Pitfall_0: 309017972509937542
-      Pitfall_1: 1754573103291082702
-      Pitfall_2: 8197580562454249033
-      Pitfall_3: 2004785483242073980
-      Pitfall_4: -6682131663059509994
-      Pitfall_5: -1236906070
-      Pitfall_6: -487121716
+      elec_drone_charging_0: 7307671387638985849
+      elec_drone_charging_1: -437955401072660405
+      elec_drone_charging_2: 1581220881967891871
+      elec_drone_charging_3: -5853666915007018352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
