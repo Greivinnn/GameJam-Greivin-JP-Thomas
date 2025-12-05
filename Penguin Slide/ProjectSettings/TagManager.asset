@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Pushable
+  - Water
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -11,11 +14,19 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Floor
+  - Ice
+  - Walls
+  - Player
+<<<<<<< Updated upstream
+  - Enemy
+=======
+<<<<<<< HEAD
+  - Explosion
+=======
+  - Enemy
+>>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
+>>>>>>> Stashed changes
   - 
   - 
   - 
