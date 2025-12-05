@@ -8,6 +8,8 @@ public class PushableObject : MonoBehaviour
     public bool IsMoving {get {return isMoving;}}
 
     private bool movingToWater = false;
+
+    private Enemy enemyAtDestination = null;
     
     private PushableObject pushableAtDestination = null;
     Vector3 pushDirection = Vector3.zero;
@@ -36,6 +38,12 @@ public class PushableObject : MonoBehaviour
                 movingToWater = false;
                 tag = "Untagged"; //removes the "Pushable" tag to make it function as a regular wall
                 GetComponent<SpriteRenderer>().sprite = sunkSprite;
+            }
+            if(enemyAtDestination != null)
+            {
+                Debug.Log("enemy should die");
+                enemyAtDestination.OnDeath();
+                enemyAtDestination = null;
             }
         }
        
@@ -66,7 +74,8 @@ public class PushableObject : MonoBehaviour
 
         Vector3 rayOrigin = transform.position + direction;
         RaycastHit2D wallHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Walls"));
-        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor", "Water"));
+        RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor", "Water", "Enemy"));
+        RaycastHit2D enemyHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Enemy"));
         if(wallHit.collider != null)
         {
             Vector3 wallPosition = wallHit.point;
@@ -117,6 +126,15 @@ public class PushableObject : MonoBehaviour
                 {
                     movingToWater = true;
                 }
+                
+            }
+        }
+        if (enemyHit.collider != null)
+        {
+            if (enemyHit.collider.tag == "Enemy" && enemyHit.collider.transform.position == targetTile)
+            {
+                Debug.Log("moving to enemy");
+                enemyAtDestination = enemyHit.collider.GetComponent<Enemy>();
             }
         }
 
