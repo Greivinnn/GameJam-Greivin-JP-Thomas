@@ -4,17 +4,28 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float sightDistance = 20.0f;
     [SerializeField] PlayerController player = null;
+    Vector3 sightPositionR;
+    Vector3 sightPositionL;
+    Vector3 sightPositionU;
+    Vector3 sightPositionD;
+    LineRenderer lineRenderer = null;
+    bool isAlive = true;
+
     void Awake()
     {
-        
+        lineRenderer = GetComponent<LineRenderer>();
 
     }
 
     void Update()
     {
-        if (CheckSightLines())
-        {
-            player.OnEnemyHit();
+        if (isAlive)
+        {   
+            if (CheckSightLines())
+            {
+                player.OnEnemyHit();
+            }
+            UpdateLineRenderer();
         }
     }
     bool CheckSightLines()
@@ -35,8 +46,25 @@ public class Enemy : MonoBehaviour
                 direction.y = i % 2 * 2 - 1;
             }
             
-            RaycastHit2D raycastHit = Physics2D.Raycast(rayOrigin + direction,direction, sightDistance, LayerMask.GetMask("Walls", "Player"));
+            RaycastHit2D raycastHit = Physics2D.Raycast(rayOrigin,direction, sightDistance, LayerMask.GetMask("Walls", "Player"));
             
+            if (direction.x > 0)
+            {
+                sightPositionR = raycastHit.point;
+            }
+            else if (direction.x < 0)
+            {
+                sightPositionL = raycastHit.point;
+            }
+            else if (direction.y > 0)
+            {
+                sightPositionU = raycastHit.point;
+            }
+            else if (direction.y < 0)
+            {
+                sightPositionD = raycastHit.point;
+            }
+
             if (raycastHit.collider.tag == "Player")
             {
                 playerFound = true;
@@ -44,5 +72,21 @@ public class Enemy : MonoBehaviour
             }
         }
         return playerFound;
+    }
+    void UpdateLineRenderer()
+    {
+        lineRenderer.SetPosition(0,transform.position);
+        lineRenderer.SetPosition(1,sightPositionR);
+        lineRenderer.SetPosition(2,sightPositionL);
+        lineRenderer.SetPosition(3,transform.position);
+        lineRenderer.SetPosition(4,sightPositionU);
+        lineRenderer.SetPosition(5,sightPositionD);
+    }
+
+    public void OnDeath()
+    {
+        isAlive = false;
+        Debug.Log("Enemy died");
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 }
