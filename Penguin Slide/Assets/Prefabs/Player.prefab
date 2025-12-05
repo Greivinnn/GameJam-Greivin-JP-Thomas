@@ -11,16 +11,8 @@ GameObject:
   - component: {fileID: 1213398513427402352}
   - component: {fileID: 5134646378619976927}
   - component: {fileID: 4055898915586771787}
-<<<<<<< Updated upstream
   - component: {fileID: 5964896746132622631}
   - component: {fileID: 1698931509729403391}
-=======
-<<<<<<< HEAD
-=======
-  - component: {fileID: 5964896746132622631}
-  - component: {fileID: 1698931509729403391}
->>>>>>> 1940d617bb0eced16a1e38c4f8c1a4d58a7fefaf
->>>>>>> Stashed changes
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -164,8 +156,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6338268444385498868}
   - component: {fileID: 1608916155684503894}
-  m_Layer: 9
-  m_Name: Body
+  m_Layer: 0
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,7 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264693708819728300}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Destination
   m_TagString: Untagged
   m_Icon: {fileID: 0}
