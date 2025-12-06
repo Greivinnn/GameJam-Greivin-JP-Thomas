@@ -238,6 +238,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = position;
         destination.transform.position = position;
+        GetComponent<Rigidbody2D>().position = position;
         animator.SetBool("IsAttacked", false);
         animator.SetBool("IsFalling", false);
         isAlive = true;
