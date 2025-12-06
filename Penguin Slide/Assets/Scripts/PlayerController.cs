@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D wallHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Walls"));
         //gets the closest collision with a floor or water tile in the given direction
         RaycastHit2D floorHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Floor", "Water"));
+        RaycastHit2D checkpointHit = Physics2D.Raycast(rayOrigin,direction, maxRaycastDistance, LayerMask.GetMask("Checkpoint"));
         if(wallHit.collider != null)
         {
             //gets the position of the collision
@@ -174,10 +175,24 @@ public class PlayerController : MonoBehaviour
         }
         if (floorHit.collider != null)
         {
+            bool isCheckpointTile = false;
             Vector3 floorPosition = floorHit.point;
 
             floorPosition.x = MathF.Round(floorPosition.x * 2.0f) / 2.0f;
             floorPosition.y = MathF.Round(floorPosition.y * 2.0f) / 2.0f;   
+
+            if (checkpointHit.collider != null)
+            {
+                Vector3 checkpointPosition = checkpointHit.point;
+
+                checkpointPosition.x = MathF.Round(checkpointPosition.x * 2.0f) / 2.0f;
+                checkpointPosition.y = MathF.Round(checkpointPosition.y * 2.0f) / 2.0f;
+
+                if (checkpointPosition == floorPosition)
+                {
+                    isCheckpointTile = true;
+                } 
+            }
 
             if (floorPosition.x % 1 == 0 && direction.x == -1)
             {
@@ -198,19 +213,24 @@ public class PlayerController : MonoBehaviour
                 //do not push if moving to a floor tile
                 pushableAtDestination = null; 
                 pushDirection = Vector3.zero;
+
+                if (isCheckpointTile)
+                {
+                    GameManager.Instance.SetSpawnPos(floorPosition);
+                }
                 if (floorHit.collider.tag == "Water" && targetTile != transform.position)
                 {
                     movingToWater = true; //queues water death
                 }
             }
         }
+ 
 
         return targetTile;
     }
 
     public void OnEnemyHit()
     {
-        Debug.Log("You died");
         isAlive = false;
         animator.SetBool("IsAttacked", true);
     }

@@ -41,7 +41,6 @@ public class PushableObject : MonoBehaviour
             }
             if(enemyAtDestination != null)
             {
-                Debug.Log("enemy should die");
                 enemyAtDestination.OnDeath();
                 enemyAtDestination = null;
             }
@@ -125,15 +124,13 @@ public class PushableObject : MonoBehaviour
                 if (floorHit.collider.tag == "Water" && targetTile != transform.position)
                 {
                     movingToWater = true;
-                }
-                
+                }  
             }
         }
         if (enemyHit.collider != null)
         {
             if (enemyHit.collider.tag == "Enemy" && enemyHit.collider.transform.position == targetTile)
             {
-                Debug.Log("moving to enemy");
                 enemyAtDestination = enemyHit.collider.GetComponent<Enemy>();
             }
         }
