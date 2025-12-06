@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: 5690172386789029944
     second: Remodeled sprites_0
+  - first:
+      213: -4535416056307959448
+    second: Remodeled sprites_1
+  - first:
+      213: 861689370522380612
+    second: Remodeled sprites_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -104,7 +110,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 24
-        y: 216
+        y: 240
         width: 24
         height: 24
       alignment: 0
@@ -125,8 +131,8 @@ TextureImporter:
       name: Remodeled sprites_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 216
+        x: 72
+        y: 240
         width: 24
         height: 24
       alignment: 0
@@ -135,10 +141,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5106b8636a007d547a342ca39d563cd2
-      internalID: 477621797
+      spriteID: 869392f5027fe01c0800000000000000
+      internalID: -4535416056307959448
       vertices: []
       indices: 
       edges: []
@@ -147,7 +153,7 @@ TextureImporter:
       name: Remodeled sprites_2
       rect:
         serializedVersion: 2
-        x: 72
+        x: 24
         y: 216
         width: 24
         height: 24
@@ -157,10 +163,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ef3b430321e027f4a94314feb811fa63
-      internalID: -2009068435
+      spriteID: 44967b4cae555fb00800000000000000
+      internalID: 861689370522380612
       vertices: []
       indices: 
       edges: []
@@ -169,7 +175,7 @@ TextureImporter:
       name: Remodeled sprites_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 216
         width: 24
         height: 24
@@ -181,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d70a60e8186441c409203e9143ba8e03
-      internalID: 836231164
+      spriteID: ac73c99926f725f459ab24e48a3c6fba
+      internalID: -619554919
       vertices: []
       indices: 
       edges: []
@@ -191,7 +197,7 @@ TextureImporter:
       name: Remodeled sprites_4
       rect:
         serializedVersion: 2
-        x: 120
+        x: 72
         y: 216
         width: 24
         height: 24
@@ -203,8 +209,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5970d6ef952ea3048821127c6859ab67
-      internalID: -638009562
+      spriteID: 88ed83d281516db45b7bf0e2e7fe3bf0
+      internalID: 1311186751
       vertices: []
       indices: 
       edges: []
@@ -213,7 +219,7 @@ TextureImporter:
       name: Remodeled sprites_5
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 216
         width: 24
         height: 24
@@ -225,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a6394d6129f4524fa5f25de6a465294
-      internalID: -666739744
+      spriteID: 03572290b6ea3884f9bf6461e4d9c8d7
+      internalID: -1938051826
       vertices: []
       indices: 
       edges: []
@@ -235,7 +241,7 @@ TextureImporter:
       name: Remodeled sprites_6
       rect:
         serializedVersion: 2
-        x: 168
+        x: 120
         y: 216
         width: 24
         height: 24
@@ -247,8 +253,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f580041c69b2c54ea79384bd5436d27
-      internalID: -1873747415
+      spriteID: c13fb6391a584cf4c8633898276c6dfb
+      internalID: 2111943891
       vertices: []
       indices: 
       edges: []
@@ -257,7 +263,7 @@ TextureImporter:
       name: Remodeled sprites_7
       rect:
         serializedVersion: 2
-        x: 192
+        x: 144
         y: 216
         width: 24
         height: 24
@@ -269,8 +275,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6aa47670a92eff546bdbde6e32546478
-      internalID: -1191980407
+      spriteID: 5ace1d7769448834491f5decaf39353f
+      internalID: 1093210601
       vertices: []
       indices: 
       edges: []
@@ -279,6 +285,50 @@ TextureImporter:
       name: Remodeled sprites_8
       rect:
         serializedVersion: 2
+        x: 168
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32702f7d66714f429c889be50438625
+      internalID: -814773642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 216
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e599d5b844dd6489d5f71c73f7cb65
+      internalID: -339501919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_10
+      rect:
+        serializedVersion: 2
         x: 216
         y: 216
         width: 24
@@ -291,52 +341,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7837321ae16aed42912a570e9f366d6
-      internalID: -577604747
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_9
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f35aeb9cd5aa434c8e492fe3de7a204
-      internalID: 91981643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_10
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b560983e72cfdc64285620c223a728b9
-      internalID: -457779808
+      spriteID: a5d082c24c6f6ea4fbe6ad010350923e
+      internalID: 583326941
       vertices: []
       indices: 
       edges: []
@@ -345,7 +351,7 @@ TextureImporter:
       name: Remodeled sprites_11
       rect:
         serializedVersion: 2
-        x: 96
+        x: 24
         y: 192
         width: 24
         height: 24
@@ -357,8 +363,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8a8b45ae76ba114093e40e09cb1534e
-      internalID: -1494868224
+      spriteID: 0e7e862ba88a30b4e87348e67769e118
+      internalID: 2002138123
       vertices: []
       indices: 
       edges: []
@@ -367,7 +373,7 @@ TextureImporter:
       name: Remodeled sprites_12
       rect:
         serializedVersion: 2
-        x: 120
+        x: 72
         y: 192
         width: 24
         height: 24
@@ -379,8 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 223c88309d00adc4084dd3e92c0c236c
-      internalID: 196314649
+      spriteID: 3495f96b0b9e2ef4db06e5d0777f90f9
+      internalID: 1461679913
       vertices: []
       indices: 
       edges: []
@@ -389,7 +395,7 @@ TextureImporter:
       name: Remodeled sprites_13
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 192
         width: 24
         height: 24
@@ -401,8 +407,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 088a84cf6de9fd54daecaf2203c1d6c7
-      internalID: -1928524825
+      spriteID: ddd694480f93ffd499c5c8e8ec6b3502
+      internalID: 1500170098
       vertices: []
       indices: 
       edges: []
@@ -411,7 +417,7 @@ TextureImporter:
       name: Remodeled sprites_14
       rect:
         serializedVersion: 2
-        x: 168
+        x: 120
         y: 192
         width: 24
         height: 24
@@ -423,8 +429,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f19e202b227a589499da54e9abac233f
-      internalID: 1428285870
+      spriteID: 79383c5521ada194196019d95b478905
+      internalID: 2107233233
       vertices: []
       indices: 
       edges: []
@@ -433,6 +439,50 @@ TextureImporter:
       name: Remodeled sprites_15
       rect:
         serializedVersion: 2
+        x: 144
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61baa4e934508e945b6326c556ffd26b
+      internalID: 178498681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_16
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 192
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ea9d7219d10e044b3bd3b428073bf7
+      internalID: -658567643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_17
+      rect:
+        serializedVersion: 2
         x: 216
         y: 192
         width: 24
@@ -445,52 +495,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3101bbd5257c5eb419b5b8dc16166943
-      internalID: 915871057
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_16
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd2918e649c5ceb479b11f63c77721d6
-      internalID: -2122546305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_17
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adbc57c4f115cb044b21c0e4302326df
-      internalID: 1694032762
+      spriteID: 9f0eee43361887f47a9019de8734cd08
+      internalID: -279334163
       vertices: []
       indices: 
       edges: []
@@ -499,7 +505,7 @@ TextureImporter:
       name: Remodeled sprites_18
       rect:
         serializedVersion: 2
-        x: 72
+        x: 24
         y: 168
         width: 24
         height: 24
@@ -511,8 +517,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c21280425b003d4f9b854389715ee38
-      internalID: -811423246
+      spriteID: 7d9a0286efdeb7746829fd3ac6e64842
+      internalID: 36482119
       vertices: []
       indices: 
       edges: []
@@ -521,7 +527,7 @@ TextureImporter:
       name: Remodeled sprites_19
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 168
         width: 24
         height: 24
@@ -533,8 +539,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8328eee7d7fe0447ba8a4e0f7100214
-      internalID: 321138044
+      spriteID: 06b26abc6a4dead4c8f52b57035c71e1
+      internalID: -1179718102
       vertices: []
       indices: 
       edges: []
@@ -543,7 +549,7 @@ TextureImporter:
       name: Remodeled sprites_20
       rect:
         serializedVersion: 2
-        x: 120
+        x: 72
         y: 168
         width: 24
         height: 24
@@ -555,8 +561,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d203840e3cfbdeb47a07a48808ed4eb9
-      internalID: -2059274015
+      spriteID: 697098ad2f412f440acdaba78edc6590
+      internalID: -1825831228
       vertices: []
       indices: 
       edges: []
@@ -565,7 +571,7 @@ TextureImporter:
       name: Remodeled sprites_21
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 168
         width: 24
         height: 24
@@ -577,8 +583,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e72c2a0cabef81a4882ac99b6531694c
-      internalID: 163018498
+      spriteID: 849877fa902dac94b893295b4c98093c
+      internalID: 1803024682
       vertices: []
       indices: 
       edges: []
@@ -587,7 +593,7 @@ TextureImporter:
       name: Remodeled sprites_22
       rect:
         serializedVersion: 2
-        x: 168
+        x: 120
         y: 168
         width: 24
         height: 24
@@ -599,8 +605,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c09b8d7c34ce604e8780daf9b066fb9
-      internalID: 601344397
+      spriteID: 3826ee4d2eeee3344a4c58a87183c292
+      internalID: 611988854
       vertices: []
       indices: 
       edges: []
@@ -609,7 +615,7 @@ TextureImporter:
       name: Remodeled sprites_23
       rect:
         serializedVersion: 2
-        x: 192
+        x: 144
         y: 168
         width: 24
         height: 24
@@ -621,8 +627,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b6e98ad9e8da2a4eaf3f5d38d8a94fb
-      internalID: 939263984
+      spriteID: 0f4505314fac8f84eb717281f74a472e
+      internalID: 163065021
       vertices: []
       indices: 
       edges: []
@@ -631,6 +637,50 @@ TextureImporter:
       name: Remodeled sprites_24
       rect:
         serializedVersion: 2
+        x: 168
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfbce542eca4474b8b4a432b0712ffe
+      internalID: -1702653157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_25
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893e5b7bfe9f5f04f8f01a22f6fc9cf3
+      internalID: -655711621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_26
+      rect:
+        serializedVersion: 2
         x: 216
         y: 168
         width: 24
@@ -643,52 +693,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a092816e1003a54da2f4bcf13b3a16b
-      internalID: -1572097346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_25
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80efbae54d2fe524f99d77895c52f769
-      internalID: 939846322
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_26
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb57645da663f594abb274d19a6bfc36
-      internalID: 1820754074
+      spriteID: bba036b3db4f51a40af22f996643d07d
+      internalID: -2013864492
       vertices: []
       indices: 
       edges: []
@@ -697,7 +703,7 @@ TextureImporter:
       name: Remodeled sprites_27
       rect:
         serializedVersion: 2
-        x: 72
+        x: 24
         y: 144
         width: 24
         height: 24
@@ -709,8 +715,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24f411e16e515314a9b0b719c781de11
-      internalID: -75583902
+      spriteID: 0ee9a4820404c2345a660770322bb2db
+      internalID: 467299810
       vertices: []
       indices: 
       edges: []
@@ -719,7 +725,7 @@ TextureImporter:
       name: Remodeled sprites_28
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 144
         width: 24
         height: 24
@@ -731,8 +737,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3aaf608f194a66642be36f86940ae72d
-      internalID: 1179480757
+      spriteID: e5d862d1c6331c642b8a83f8d62524f3
+      internalID: 1094323901
       vertices: []
       indices: 
       edges: []
@@ -741,7 +747,7 @@ TextureImporter:
       name: Remodeled sprites_29
       rect:
         serializedVersion: 2
-        x: 120
+        x: 72
         y: 144
         width: 24
         height: 24
@@ -753,8 +759,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8aedac1e0a2503e4282278d2e953d60e
-      internalID: -19452004
+      spriteID: 51189b9ccdce61244a573fc8530adaa3
+      internalID: -2144003364
       vertices: []
       indices: 
       edges: []
@@ -763,7 +769,7 @@ TextureImporter:
       name: Remodeled sprites_30
       rect:
         serializedVersion: 2
-        x: 144
+        x: 96
         y: 144
         width: 24
         height: 24
@@ -775,8 +781,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b03327132b34c4c4b849378a8237c1b4
-      internalID: 617222466
+      spriteID: d28455f66d9330143a7af9afb4283627
+      internalID: -401455685
       vertices: []
       indices: 
       edges: []
@@ -785,7 +791,7 @@ TextureImporter:
       name: Remodeled sprites_31
       rect:
         serializedVersion: 2
-        x: 168
+        x: 120
         y: 144
         width: 24
         height: 24
@@ -797,8 +803,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5d42c7b714e6f14a86bfec04135b476
-      internalID: -1387102152
+      spriteID: 521200a38d0d9f941ab0ac3317b29f8e
+      internalID: -2075427067
       vertices: []
       indices: 
       edges: []
@@ -807,7 +813,7 @@ TextureImporter:
       name: Remodeled sprites_32
       rect:
         serializedVersion: 2
-        x: 192
+        x: 144
         y: 144
         width: 24
         height: 24
@@ -819,8 +825,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e3f612e94e4dc24784038735ae6ae99
-      internalID: 1697493071
+      spriteID: 72ab35b79699a7f4795f5ac1ca3edfa8
+      internalID: -1717675147
       vertices: []
       indices: 
       edges: []
@@ -829,6 +835,50 @@ TextureImporter:
       name: Remodeled sprites_33
       rect:
         serializedVersion: 2
+        x: 168
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714f53aadab3ee046b9982c1b73137e2
+      internalID: -1312616477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1194a62f31c2b514eac04bc8ce3ea931
+      internalID: -701449068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_35
+      rect:
+        serializedVersion: 2
         x: 216
         y: 144
         width: 24
@@ -841,14 +891,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3eaf8c37e469a3b4288adc1d8397344c
-      internalID: 22003187
+      spriteID: 3ca8916a0a184d04d8b6bf1680615c44
+      internalID: -1068031466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_34
+      name: Remodeled sprites_36
       rect:
         serializedVersion: 2
         x: 24
@@ -863,14 +913,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6252644d65543b143aff780d213d6483
-      internalID: -484203987
+      spriteID: a690b411efdcb0d4c99ca5e0e95ae6e3
+      internalID: 686349358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_35
+      name: Remodeled sprites_37
       rect:
         serializedVersion: 2
         x: 48
@@ -885,14 +935,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86a40973a808b84d9aa80686a959138
-      internalID: -33528618
+      spriteID: d0c626efa22af284ca875c73c65a75db
+      internalID: 173812323
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_36
+      name: Remodeled sprites_38
       rect:
         serializedVersion: 2
         x: 72
@@ -907,14 +957,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6320b2c95f16ed04e9548c8f38c34563
-      internalID: -638309986
+      spriteID: ca3cd0680dca3cc43b786b0ad5442682
+      internalID: 1292187742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_37
+      name: Remodeled sprites_39
       rect:
         serializedVersion: 2
         x: 96
@@ -929,14 +979,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c4f26dd414f49842af6e0cb3e31bba6
-      internalID: 932019616
+      spriteID: f09f045293b0c9f458cb609891bf0cc3
+      internalID: 514507986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_38
+      name: Remodeled sprites_40
       rect:
         serializedVersion: 2
         x: 120
@@ -951,14 +1001,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c0301f566ba55649b5dfc10e74961c4
-      internalID: 1174599396
+      spriteID: 60b5fc94eedc37248b7669bd0aaf3b1e
+      internalID: 783199000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_39
+      name: Remodeled sprites_41
       rect:
         serializedVersion: 2
         x: 144
@@ -973,14 +1023,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cbdba128beee614e8db646121c4824f
-      internalID: -1133098184
+      spriteID: bec41ff5db5157c4da4431009b0de7a5
+      internalID: -1078186910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_40
+      name: Remodeled sprites_42
       rect:
         serializedVersion: 2
         x: 168
@@ -995,14 +1045,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 032da40e10be5094aaeabdf9123a1dcb
-      internalID: 1414841610
+      spriteID: fe54b921f65c5ab4291ff5cf2396086d
+      internalID: -2089900220
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_41
+      name: Remodeled sprites_43
       rect:
         serializedVersion: 2
         x: 216
@@ -1017,14 +1067,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61fafbd4f67b1e4b95219d38443f4ea
-      internalID: -1163120238
+      spriteID: 58bfbff0f18313147a5582e4ae7cd9ff
+      internalID: -831715705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_42
+      name: Remodeled sprites_44
       rect:
         serializedVersion: 2
         x: 24
@@ -1039,14 +1089,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae86ab9b31c64df4595047b6a4ff606a
-      internalID: 522787650
+      spriteID: 0c3be15369816ec498f8f62d24a49279
+      internalID: -307765975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_43
+      name: Remodeled sprites_45
       rect:
         serializedVersion: 2
         x: 48
@@ -1061,14 +1111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fedd2f5d77a1ff744981fcd138c2d5da
-      internalID: -1114072685
+      spriteID: 3903211b799cb2f4d80b516c39ac9eeb
+      internalID: -607826534
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_44
+      name: Remodeled sprites_46
       rect:
         serializedVersion: 2
         x: 72
@@ -1083,14 +1133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2f4ca018fc4e9248a79e8097c164302
-      internalID: 2143112780
+      spriteID: b576a11f90eee5848b08440ac3f1c90b
+      internalID: 1453510226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_45
+      name: Remodeled sprites_47
       rect:
         serializedVersion: 2
         x: 96
@@ -1105,14 +1155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffb17988ccb26384c92924bfca38cbb4
-      internalID: -1127790129
+      spriteID: 0f80db3bbfb49fb4eb15199b464eddb9
+      internalID: -286673063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_46
+      name: Remodeled sprites_48
       rect:
         serializedVersion: 2
         x: 120
@@ -1127,14 +1177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 371583b032eaf6e42a1e7d356e1b9d83
-      internalID: -1842378648
+      spriteID: d0b2321839e816b419db668ae5fb117a
+      internalID: -195970215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_47
+      name: Remodeled sprites_49
       rect:
         serializedVersion: 2
         x: 144
@@ -1149,14 +1199,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7126732a902e8044a3843308196254a
-      internalID: 1836205311
+      spriteID: 034717eee1ef528488deb67c32256742
+      internalID: 1757399973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_48
+      name: Remodeled sprites_50
       rect:
         serializedVersion: 2
         x: 168
@@ -1171,14 +1221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fbf23a8e2a60b246b7c25e6e7afc775
-      internalID: -334310386
+      spriteID: d5a3d67b895aa054c9978bb5271b248a
+      internalID: -285948529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_49
+      name: Remodeled sprites_51
       rect:
         serializedVersion: 2
         x: 192
@@ -1193,14 +1243,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 845e7fc1dd888e04b8837edd2647813b
-      internalID: -849895216
+      spriteID: 39e2f4dadc957244484bb61baf4011bc
+      internalID: 1469864708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_50
+      name: Remodeled sprites_52
       rect:
         serializedVersion: 2
         x: 216
@@ -1215,52 +1265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055f6212760686441b724955bfced1d8
-      internalID: -340227319
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_51
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 77b7c8a1c10ba3b47860956b683e3db1
-      internalID: -1135029702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Remodeled sprites_52
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 507818111db438e47a39869ca6591ba6
-      internalID: 1031883745
+      spriteID: ca588b5145df7324594e71cdb3a1bcc2
+      internalID: -1040562430
       vertices: []
       indices: 
       edges: []
@@ -1269,6 +1275,50 @@ TextureImporter:
       name: Remodeled sprites_53
       rect:
         serializedVersion: 2
+        x: 24
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd214fdb0671c1478ea6c87f9721666
+      internalID: 424354977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d11057776edb0ba43a84abc737c86545
+      internalID: 1635893379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_55
+      rect:
+        serializedVersion: 2
         x: 72
         y: 72
         width: 24
@@ -1281,14 +1331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef33fb6f401f0184c8e768c5ac7c2ba0
-      internalID: -317425228
+      spriteID: c556c9bc8ed64c94596a83da3056a0f7
+      internalID: -1230858002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_54
+      name: Remodeled sprites_56
       rect:
         serializedVersion: 2
         x: 96
@@ -1303,14 +1353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e20113d157809734ea7b6b01f35a1f72
-      internalID: 1633544810
+      spriteID: f78705443b1dfdd4cb9d959cad443832
+      internalID: -1798171882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_55
+      name: Remodeled sprites_57
       rect:
         serializedVersion: 2
         x: 120
@@ -1325,14 +1375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06f29755ad526f64ea6f02e004b66c2d
-      internalID: 1831245036
+      spriteID: c5e3356afc1a51047aad95f55989f94e
+      internalID: 452065589
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_56
+      name: Remodeled sprites_58
       rect:
         serializedVersion: 2
         x: 144
@@ -1347,14 +1397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af5d53821c7bd57499607412bcedb143
-      internalID: 1492724925
+      spriteID: 7c9c595867f9a6e4da8d83ee3ad8f2b5
+      internalID: 329016695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_57
+      name: Remodeled sprites_59
       rect:
         serializedVersion: 2
         x: 168
@@ -1369,14 +1419,58 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11251805a44a3304b985d22819db565f
-      internalID: 1887392993
+      spriteID: df5a8f6275b96044faffd65e2a4abcf1
+      internalID: -445062553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_58
+      name: Remodeled sprites_60
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5783fd72704eb478ad7ad8ceb334f6
+      internalID: 296096076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_61
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 72
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c13108af6170f40b3e449a234ea132
+      internalID: -876026490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_62
       rect:
         serializedVersion: 2
         x: 24
@@ -1391,14 +1485,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb2abf45fcbc99344be0af0a9a566d37
-      internalID: 1278258865
+      spriteID: a150d0c14531fbe4ba2c9d1bbbca8b38
+      internalID: 149464218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_59
+      name: Remodeled sprites_63
       rect:
         serializedVersion: 2
         x: 48
@@ -1413,14 +1507,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18466bd1b368c7a43ab9cec762a4a4d1
-      internalID: 1896470751
+      spriteID: 97d7f59455ef9914d8aa9ee8f444665b
+      internalID: 1957639510
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_60
+      name: Remodeled sprites_64
       rect:
         serializedVersion: 2
         x: 72
@@ -1435,14 +1529,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cc0792fc97dda4419ccd0ad72b2262d
-      internalID: -1031845864
+      spriteID: c184524f50d4b9a48a5953d2cf27c2e2
+      internalID: -1229969371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_61
+      name: Remodeled sprites_65
       rect:
         serializedVersion: 2
         x: 96
@@ -1457,14 +1551,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 462e4001ae4cc584ab84a2ffd2b7035c
-      internalID: 2119950209
+      spriteID: d5449efb03df94b49a1884dc8eab1cb7
+      internalID: -1870684348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_62
+      name: Remodeled sprites_66
       rect:
         serializedVersion: 2
         x: 120
@@ -1479,14 +1573,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1534e7c1c656af543b6f4e50b3273d46
-      internalID: 1353845645
+      spriteID: f2417622982e5534fa33f599f8f6cd52
+      internalID: -730587802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_63
+      name: Remodeled sprites_67
       rect:
         serializedVersion: 2
         x: 144
@@ -1501,14 +1595,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de9c9a8a6159e484e830b8fe260ddc2b
-      internalID: -240644965
+      spriteID: 47bfb5cbc0331ad4eac5294f7cd0f0a7
+      internalID: -615224343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_64
+      name: Remodeled sprites_68
       rect:
         serializedVersion: 2
         x: 168
@@ -1523,14 +1617,168 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2383e6c6bc019b44cb5a09db01c0eb7f
-      internalID: -1591274707
+      spriteID: ff2e4869dd0d60c48847af310709f07c
+      internalID: -800382026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Remodeled sprites_65
+      name: Remodeled sprites_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15be82f2e47efb47a54ee0ddca2df18
+      internalID: -552971307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_70
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 48
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 197e6b55872bfbb4e8dd16edeebe4058
+      internalID: -1894479155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813b147d8b691df41ac0b68a8a0039a4
+      internalID: 1491847045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_72
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae8b554d4e760943b66d610ca4a17a3
+      internalID: -718252066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ce80353ea4c474f8bf7bf6fee9bcad
+      internalID: -1536048598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bd1403871633e4c9bbccc6701c5c51
+      internalID: 1055946924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_75
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 24
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2751d845e6b84f9419eb34a82d9fa674
+      internalID: 45674067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_76
       rect:
         serializedVersion: 2
         x: 168
@@ -1545,8 +1793,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a98352c66ddd5b94a83309595a1aa1c3
-      internalID: -1556241149
+      spriteID: a315d7ecc118ab24eb213e967ddc08eb
+      internalID: -2058299553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_77
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce615ab8cd75c84d8c69494c1c5285c
+      internalID: 1021099076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_78
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6519d66261dae7142b38f880d9795f98
+      internalID: 1505915599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Remodeled sprites_79
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d99b725e8b4626447ba17ca55a38d879
+      internalID: -1556001001
       vertices: []
       indices: 
       edges: []
@@ -1555,7 +1869,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0a0f20aeaf9a35646823a182650163f6
+    spriteID: 916727e618307df4e9a04ad35cc6653f
     internalID: 0
     vertices: []
     indices: 
@@ -1568,71 +1882,85 @@ TextureImporter:
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":24.0,"y":24.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Remodeled sprites_0: 5690172386789029944
-      Remodeled sprites_1: 477621797
-      Remodeled sprites_10: -457779808
-      Remodeled sprites_11: -1494868224
-      Remodeled sprites_12: 196314649
-      Remodeled sprites_13: -1928524825
-      Remodeled sprites_14: 1428285870
-      Remodeled sprites_15: 915871057
-      Remodeled sprites_16: -2122546305
-      Remodeled sprites_17: 1694032762
-      Remodeled sprites_18: -811423246
-      Remodeled sprites_19: 321138044
-      Remodeled sprites_2: -2009068435
-      Remodeled sprites_20: -2059274015
-      Remodeled sprites_21: 163018498
-      Remodeled sprites_22: 601344397
-      Remodeled sprites_23: 939263984
-      Remodeled sprites_24: -1572097346
-      Remodeled sprites_25: 939846322
-      Remodeled sprites_26: 1820754074
-      Remodeled sprites_27: -75583902
-      Remodeled sprites_28: 1179480757
-      Remodeled sprites_29: -19452004
-      Remodeled sprites_3: 836231164
-      Remodeled sprites_30: 617222466
-      Remodeled sprites_31: -1387102152
-      Remodeled sprites_32: 1697493071
-      Remodeled sprites_33: 22003187
-      Remodeled sprites_34: -484203987
-      Remodeled sprites_35: -33528618
-      Remodeled sprites_36: -638309986
-      Remodeled sprites_37: 932019616
-      Remodeled sprites_38: 1174599396
-      Remodeled sprites_39: -1133098184
-      Remodeled sprites_4: -638009562
-      Remodeled sprites_40: 1414841610
-      Remodeled sprites_41: -1163120238
-      Remodeled sprites_42: 522787650
-      Remodeled sprites_43: -1114072685
-      Remodeled sprites_44: 2143112780
-      Remodeled sprites_45: -1127790129
-      Remodeled sprites_46: -1842378648
-      Remodeled sprites_47: 1836205311
-      Remodeled sprites_48: -334310386
-      Remodeled sprites_49: -849895216
-      Remodeled sprites_5: -666739744
-      Remodeled sprites_50: -340227319
-      Remodeled sprites_51: -1135029702
-      Remodeled sprites_52: 1031883745
-      Remodeled sprites_53: -317425228
-      Remodeled sprites_54: 1633544810
-      Remodeled sprites_55: 1831245036
-      Remodeled sprites_56: 1492724925
-      Remodeled sprites_57: 1887392993
-      Remodeled sprites_58: 1278258865
-      Remodeled sprites_59: 1896470751
-      Remodeled sprites_6: -1873747415
-      Remodeled sprites_60: -1031845864
-      Remodeled sprites_61: 2119950209
-      Remodeled sprites_62: 1353845645
-      Remodeled sprites_63: -240644965
-      Remodeled sprites_64: -1591274707
-      Remodeled sprites_65: -1556241149
-      Remodeled sprites_7: -1191980407
-      Remodeled sprites_8: -577604747
-      Remodeled sprites_9: 91981643
+      Remodeled sprites_1: -4535416056307959448
+      Remodeled sprites_10: 583326941
+      Remodeled sprites_11: 2002138123
+      Remodeled sprites_12: 1461679913
+      Remodeled sprites_13: 1500170098
+      Remodeled sprites_14: 2107233233
+      Remodeled sprites_15: 178498681
+      Remodeled sprites_16: -658567643
+      Remodeled sprites_17: -279334163
+      Remodeled sprites_18: 36482119
+      Remodeled sprites_19: -1179718102
+      Remodeled sprites_2: 861689370522380612
+      Remodeled sprites_20: -1825831228
+      Remodeled sprites_21: 1803024682
+      Remodeled sprites_22: 611988854
+      Remodeled sprites_23: 163065021
+      Remodeled sprites_24: -1702653157
+      Remodeled sprites_25: -655711621
+      Remodeled sprites_26: -2013864492
+      Remodeled sprites_27: 467299810
+      Remodeled sprites_28: 1094323901
+      Remodeled sprites_29: -2144003364
+      Remodeled sprites_3: -619554919
+      Remodeled sprites_30: -401455685
+      Remodeled sprites_31: -2075427067
+      Remodeled sprites_32: -1717675147
+      Remodeled sprites_33: -1312616477
+      Remodeled sprites_34: -701449068
+      Remodeled sprites_35: -1068031466
+      Remodeled sprites_36: 686349358
+      Remodeled sprites_37: 173812323
+      Remodeled sprites_38: 1292187742
+      Remodeled sprites_39: 514507986
+      Remodeled sprites_4: 1311186751
+      Remodeled sprites_40: 783199000
+      Remodeled sprites_41: -1078186910
+      Remodeled sprites_42: -2089900220
+      Remodeled sprites_43: -831715705
+      Remodeled sprites_44: -307765975
+      Remodeled sprites_45: -607826534
+      Remodeled sprites_46: 1453510226
+      Remodeled sprites_47: -286673063
+      Remodeled sprites_48: -195970215
+      Remodeled sprites_49: 1757399973
+      Remodeled sprites_5: -1938051826
+      Remodeled sprites_50: -285948529
+      Remodeled sprites_51: 1469864708
+      Remodeled sprites_52: -1040562430
+      Remodeled sprites_53: 424354977
+      Remodeled sprites_54: 1635893379
+      Remodeled sprites_55: -1230858002
+      Remodeled sprites_56: -1798171882
+      Remodeled sprites_57: 452065589
+      Remodeled sprites_58: 329016695
+      Remodeled sprites_59: -445062553
+      Remodeled sprites_6: 2111943891
+      Remodeled sprites_60: 296096076
+      Remodeled sprites_61: -876026490
+      Remodeled sprites_62: 149464218
+      Remodeled sprites_63: 1957639510
+      Remodeled sprites_64: -1229969371
+      Remodeled sprites_65: -1870684348
+      Remodeled sprites_66: -730587802
+      Remodeled sprites_67: -615224343
+      Remodeled sprites_68: -800382026
+      Remodeled sprites_69: -552971307
+      Remodeled sprites_7: 1093210601
+      Remodeled sprites_70: -1894479155
+      Remodeled sprites_71: 1491847045
+      Remodeled sprites_72: -718252066
+      Remodeled sprites_73: -1536048598
+      Remodeled sprites_74: 1055946924
+      Remodeled sprites_75: 45674067
+      Remodeled sprites_76: -2058299553
+      Remodeled sprites_77: 1021099076
+      Remodeled sprites_78: 1505915599
+      Remodeled sprites_79: -1556001001
+      Remodeled sprites_8: -814773642
+      Remodeled sprites_9: -339501919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

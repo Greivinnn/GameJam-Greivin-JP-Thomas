@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Remodeled sprites 1_16
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 1809799410, guid: 12a7d633bf48a0448b06b6add6dd8d6a, type: 3}
+  m_Sprite: {fileID: -784176536, guid: e6b638db5ed230446bc5bc061caef063, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
