@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("MoveY", -1f);
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
-        //animator.SetBool("IsOnIce", false);
+        animator.SetBool("IsOnIce", false);
     }
 
     void OnEnable()
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
             }
             animator.SetBool("IsMoving", isMoving);
             animator.SetBool("IsPushing", isPushing);
-            //animator.SetBool("IsOnIce", isOnIce);
+            animator.SetBool("IsOnIce", isOnIce);
             animator.SetFloat("MoveX",spriteDirection.x);
             animator.SetFloat("MoveY",spriteDirection.y);
             isPushing = false;
