@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -400130723843321065, guid: c431a3aaa84f06b4da25c522674de6c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,6 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1034846630115569579}
   - component: {fileID: 1755013256243670633}
+  - component: {fileID: 8269447891503482768}
   m_Layer: 0
   m_Name: Lighting
   m_TagString: Untagged
@@ -145,3 +146,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8269447891503482768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4282226690399328331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa372fbfcb929444b8c78f06fae822d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightningAttack
+  lifetime: 1

@@ -4,6 +4,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] float sightDistance = 20.0f;
     [SerializeField] PlayerController player = null;
+    [SerializeField] GameObject lightningPrefab = null;
+    [SerializeField] Transform lightningSpawnPoint;
     Vector3 sightPositionR;
     Vector3 sightPositionL;
     Vector3 sightPositionU;
@@ -11,6 +13,9 @@ public class Enemy : MonoBehaviour
     LineRenderer lineRenderer = null;
     bool isAlive = true;
     Animator animator = null;
+    Vector3 playerPosition = Vector3.zero;
+    Vector3 attackDirection = Vector3.zero;
+
 
     void Awake()
     {
@@ -24,6 +29,7 @@ public class Enemy : MonoBehaviour
         {   
             if (CheckSightLines())
             {
+                SpawnLightningAttack();
                 player.OnEnemyHit();
                 animator.SetBool("isAttacking", true);
             }
@@ -50,7 +56,7 @@ public class Enemy : MonoBehaviour
             }
             
             RaycastHit2D raycastHit = Physics2D.Raycast(rayOrigin,direction, sightDistance, LayerMask.GetMask("Walls", "Player"));
-            
+
             if (direction.x > 0)
             {
                 sightPositionR = raycastHit.point;
@@ -71,10 +77,37 @@ public class Enemy : MonoBehaviour
             if (raycastHit.collider.tag == "Player")
             {
                 playerFound = true;
+                playerPosition = raycastHit.collider.transform.position;
+                attackDirection = direction;
                 break;
             }
         }
         return playerFound;
+    }
+
+    void SpawnLightningAttack()
+    {
+        if (lightningPrefab == null)
+        {
+            Debug.LogWarning("Lightning prefab not assigned!");
+            return;
+        }
+
+        // Spawn at midpoint - the Setup will reposition it anyway
+        GameObject lightning = Instantiate(lightningPrefab, Vector3.zero, Quaternion.identity);
+
+        LightningAttack lightningScript = lightning.GetComponent<LightningAttack>();
+
+        if (lightningScript != null)
+        {
+            // Pass enemy position (or spawn point) and player position
+            lightningScript.Setup(lightningSpawnPoint.position, playerPosition, attackDirection);
+            Debug.Log("Lightning spawned between enemy and player");
+        }
+        else
+        {
+            Debug.LogWarning("LightningAttack component not found on prefab!");
+        }
     }
     void UpdateLineRenderer()
     {
@@ -89,7 +122,7 @@ public class Enemy : MonoBehaviour
     public void OnDeath()
     {
         isAlive = false;
-        Debug.Log("Enemy died");
+        //Debug.Log("Enemy died");
         GetComponent<BoxCollider2D>().enabled = false;
         animator.SetBool("IsAlive", true);
     }
