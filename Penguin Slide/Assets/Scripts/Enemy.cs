@@ -3,7 +3,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] float sightDistance = 20.0f;
-    [SerializeField] PlayerController player = null;
+    [SerializeField] public PlayerController player = null;
     [SerializeField] GameObject lightningPrefab = null;
     [SerializeField] Transform lightningSpawnPoint;
     Vector3 sightPositionR;

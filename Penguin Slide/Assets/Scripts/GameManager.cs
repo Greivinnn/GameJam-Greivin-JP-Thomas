@@ -109,16 +109,18 @@ public class GameManager : MonoBehaviour
             PushableObject pushable = Instantiate(rockPrefab, position, quaternion.identity).GetComponent<PushableObject>();
             pushableObjects.Add(pushable);
         }
-        // foreach (Enemy enemy in enemies)
-        // {
-        //     Destroy(enemy.gameObject);
-        // }
-        // enemies.Clear();
-        // foreach (Vector3 position in enemySpawnPositions)
-        // {
-        //     Enemy enemy = Instantiate(enemyPrefab, position, quaternion.identity).GetComponent<Enemy>();
-        //     enemies.Add(enemy);
-        // }
+        foreach (Enemy enemy in enemies)
+        {
+            Destroy(enemy.GetComponentInChildren<Transform>().gameObject);
+            Destroy(enemy.gameObject);
+        }
+        enemies.Clear();
+        foreach (Vector3 position in enemySpawnPositions)
+        {
+            Enemy enemy = Instantiate(enemyPrefab, position, quaternion.identity).GetComponent<Enemy>();
+            enemy.player = player;
+            enemies.Add(enemy);
+        }
     }
 
     void OnRestart(InputAction.CallbackContext context)

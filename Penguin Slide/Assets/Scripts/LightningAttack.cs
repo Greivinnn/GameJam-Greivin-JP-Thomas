@@ -13,8 +13,9 @@ public class LightningAttack : MonoBehaviour
             lifetime -= Time.deltaTime;
             if (lifetime <= 0)
             {
-                Destroy(gameObject);
                 isSetup = false;
+                Destroy(GetComponentInChildren<Transform>().gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -38,6 +39,6 @@ public class LightningAttack : MonoBehaviour
         //// Since pivot is at center, scaling from center will reach both ends
         //transform.localScale = new Vector3(distance / spriteWidth, transform.localScale.y, transform.localScale.z);
 
-        //isSetup = true;
+        isSetup = true;
     }
 }
