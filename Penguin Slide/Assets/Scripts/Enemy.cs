@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     Vector3 playerPosition = Vector3.zero;
     Vector3 attackDirection = Vector3.zero;
     bool lightningSpawned = false;
+    bool attackedThisFrame = false;
 
 
     void Awake()
@@ -29,8 +30,8 @@ public class Enemy : MonoBehaviour
     {
         if (isAlive)
         {   
-
-            if (CheckSightLines())
+            
+            if (CheckSightLines() && player.IsAlive)
             {
                 if (!lightningSpawned)
                 {   
@@ -39,10 +40,18 @@ public class Enemy : MonoBehaviour
                 }
                 player.OnEnemyHit();
                 animator.SetBool("IsAttacking", true);
+                attackedThisFrame = true;
+                
             }
+
             UpdateLineRenderer();
         }
 
+    }
+
+    public void ResetAttackAnimation()
+    {
+        animator.SetBool("IsAttacking", false);
     }
     bool CheckSightLines()
     {
@@ -131,6 +140,7 @@ public class Enemy : MonoBehaviour
         isAlive = false;
         //Debug.Log("Enemy died");
         GetComponent<BoxCollider2D>().enabled = false;
-        animator.SetBool("IsAlive", true);
+        animator.SetBool("IsAlive", false);
+        animator.SetBool("IsAttacking", false);
     }
 }
