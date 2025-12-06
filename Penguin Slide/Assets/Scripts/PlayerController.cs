@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private bool movingToWater = false;  //makes the player die when they reach the destination
 
     private bool isAlive = true;
+    public bool IsAlive { get {return isAlive;}}
 
     //stores the pushable object that the player is currently moving to, if there is one
     private PushableObject pushableAtDestination = null; 

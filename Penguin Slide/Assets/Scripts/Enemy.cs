@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     Animator animator = null;
     Vector3 playerPosition = Vector3.zero;
     Vector3 attackDirection = Vector3.zero;
+    bool lightningSpawned = false;
 
 
     void Awake()
@@ -29,9 +30,13 @@ public class Enemy : MonoBehaviour
         {   
             if (CheckSightLines())
             {
-                SpawnLightningAttack();
+                if (!lightningSpawned)
+                {   
+                    lightningSpawned = true;
+                    SpawnLightningAttack();
+                }
                 player.OnEnemyHit();
-                animator.SetBool("isAttacking", true);
+                animator.SetBool("IsAttacking", true);
             }
             UpdateLineRenderer();
         }
@@ -101,7 +106,7 @@ public class Enemy : MonoBehaviour
         if (lightningScript != null)
         {
             // Pass enemy position (or spawn point) and player position
-            lightningScript.Setup(lightningSpawnPoint.position, playerPosition, attackDirection);
+            lightningScript.Setup(transform.position, playerPosition, attackDirection);
             Debug.Log("Lightning spawned between enemy and player");
         }
         else
