@@ -32,13 +32,7 @@ public class LightningAttack : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
 
-        //// Get the sprite's original width
-        //SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        //float spriteWidth = 1f;
-        //if (sr != null && sr.sprite != null)
-        //{
-        //    spriteWidth = sr.sprite.bounds.size.x;
-        //}
+        transform.localScale = new Vector3(0.2f * distance, 1f, 1f);
 
         //// Scale the sprite to exactly match the distance
         //// Since pivot is at center, scaling from center will reach both ends
