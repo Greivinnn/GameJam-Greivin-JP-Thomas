@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     {
         if (isAlive)
         {   
+
             if (CheckSightLines())
             {
                 if (!lightningSpawned)
