@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     {
         lineRenderer = GetComponent<LineRenderer>();
         animator = GetComponent<Animator>();
+        animator.SetBool("IsAlive", true);
     }
 
     void Update()

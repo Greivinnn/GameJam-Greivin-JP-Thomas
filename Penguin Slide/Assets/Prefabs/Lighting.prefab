@@ -158,4 +158,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa372fbfcb929444b8c78f06fae822d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LightningAttack
-  lifetime: 1
+  lifetime: 0.5
