@@ -234,4 +234,12 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+    public void Respawn(Vector3 position)
+    {
+        transform.position = position;
+        destination.transform.position = position;
+        animator.SetBool("IsAttacked", false);
+        animator.SetBool("IsFalling", false);
+        isAlive = true;
+    }
 }

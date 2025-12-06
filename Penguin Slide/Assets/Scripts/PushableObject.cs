@@ -5,7 +5,7 @@ public class PushableObject : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private Transform destination;
     private bool isMoving;
-    public bool IsMoving {get {return isMoving;}}
+    public bool IsMoving {get { return isMoving; }}
 
     private bool movingToWater = false;
 
