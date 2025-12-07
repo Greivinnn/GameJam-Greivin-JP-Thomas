@@ -143,4 +143,23 @@ public class Enemy : MonoBehaviour
         animator.SetBool("IsAlive", false);
         animator.SetBool("IsAttacking", false);
     }
+
+    public EnemyState GetEnemyData()
+    {
+        EnemyState enemyState;
+        enemyState.isAlive = isAlive;
+        return enemyState;
+    }
+
+    public void LoadState(EnemyState enemyState)
+    {
+        isAlive = enemyState.isAlive;
+        if (isAlive)
+        {
+            GetComponent<BoxCollider2D>().enabled = true;
+            animator.SetBool("IsAlive", true);
+            animator.Play("RobotIdleAnimation");
+            lineRenderer.enabled = true;
+        }
+    }
 }

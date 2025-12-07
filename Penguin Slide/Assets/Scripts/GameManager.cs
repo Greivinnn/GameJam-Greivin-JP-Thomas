@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Data;
+using NUnit.Framework;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -25,10 +27,19 @@ public class GameManager : MonoBehaviour
     private List<Vector3> enemySpawnPositions = new List<Vector3>(); 
     [SerializeField] private GameObject enemyPrefab;
 
+    List<Key> keysHeld = new List<Key>();
+
+    private List<SaveState> previousStates = new List<SaveState>();
+    private int maxStepsSaved = 100;
+
+
     private Vector3 spawnPos;
 
     private PlayerInput input = null;
     private InputAction restartAction = null;
+
+    private int keyAmount = 0;
+    public int KeyAmount {get{return keyAmount;} set{keyAmount=value;}}
 
     void Awake()
     {
@@ -101,6 +112,7 @@ public class GameManager : MonoBehaviour
         player.Respawn(spawnPos);
         foreach (PushableObject pushable in pushableObjects)
         {
+            Destroy(pushable.GetComponentInChildren<Transform>().gameObject);
             Destroy(pushable.gameObject);
         }
         pushableObjects.Clear();
@@ -121,10 +133,96 @@ public class GameManager : MonoBehaviour
             enemy.player = player;
             enemies.Add(enemy);
         }
+        foreach (Key key in keysHeld)
+        {
+            key.enabled = true;
+        }
     }
 
     void OnRestart(InputAction.CallbackContext context)
     {
         Respawn();
+    }
+
+    public void CollectKey(Key key)
+    {
+        keysHeld.Add(key);
+        key.Collect();
+    }
+
+    public void UnlockDoor(Door door)
+    {
+        bool hasCorrespondingKey = false;
+        Key keyForDoor = null;
+        foreach (Key key in keysHeld)
+        {
+            if (key.DoorUnlockID == door.DoorID)
+            {
+                hasCorrespondingKey = true;
+                keyForDoor = key;
+                break;
+            }
+        }
+        if (hasCorrespondingKey)
+        {
+            door.Unlock();
+            keysHeld.Remove(keyForDoor);
+            Destroy(keyForDoor.gameObject);
+        }
+    }
+
+    public void SaveGame()
+    {
+        SaveState saveState;
+        saveState.player = player.GetPlayerData();
+        saveState.enemies = new List<EnemyState>();
+        foreach (Enemy enemy in enemies)
+        {
+            saveState.enemies.Add(enemy.GetEnemyData());
+        }
+        saveState.pushables = new List<PushableState>();
+        foreach (PushableObject pushable in pushableObjects)
+        {
+            saveState.pushables.Add(pushable.GetPushableData());
+        }
+        saveState.keysHeld = keysHeld;
+
+
+        bool isNewState = false;
+        if (previousStates.Count == 0)
+        {
+            isNewState = true;
+        }
+        else if (previousStates[previousStates.Count-1].player.position != player.transform.position)
+        {
+            isNewState = true;
+        }
+        if (isNewState)
+        {
+            if (previousStates.Count == maxStepsSaved)
+            {
+                previousStates.RemoveAt(0);
+            }
+            previousStates.Add(saveState);
+        }
+    }
+    public void LoadPreviousState()
+    {
+        if(previousStates.Count >= 1)
+        {
+            SaveState previousState = previousStates[previousStates.Count-1];
+            player.LoadState(previousState.player);
+            for (int i = 0; i < previousState.pushables.Count; i++)
+            {
+                pushableObjects[i].LoadState(previousState.pushables[i]);
+            }
+
+            for (int i = 0; i < previousState.enemies.Count; i++)
+            {
+                enemies[i].LoadState(previousState.enemies[i]);
+            }
+            keysHeld = previousState.keysHeld;
+            previousStates.RemoveAt(previousStates.Count-1);
+        }
     }
 }

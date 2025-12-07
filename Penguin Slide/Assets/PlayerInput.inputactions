@@ -578,6 +578,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Undo",
+                    "type": "Button",
+                    "id": "389442e4-154f-416c-99d4-c726d453a879",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1007,6 +1016,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "Restart",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aafc8b55-50a3-4c78-9eb2-86a3b1140a7e",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Undo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -138,4 +138,20 @@ public class PushableObject : MonoBehaviour
         return targetTile;
     }
 
+    public PushableState GetPushableData()
+    {
+        PushableState pushableState;
+        pushableState.position = transform.position;
+        pushableState.tag = tag;
+        pushableState.sprite = GetComponent<SpriteRenderer>().sprite;
+        return pushableState;
+    }
+
+    public void LoadState(PushableState pushableState)
+    {
+        transform.position = pushableState.position;
+        destination.position = pushableState.position;
+        tag = pushableState.tag;
+        GetComponent<SpriteRenderer>().sprite = pushableState.sprite;
+    }
 }
