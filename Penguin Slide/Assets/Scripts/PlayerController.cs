@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
     private bool isOnIce = false;
     private List<Collider2D> floorsInContact = new List<Collider2D>();
 
-    private bool waitForUndo = false;
-
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
 
@@ -298,7 +296,7 @@ public class PlayerController : MonoBehaviour
 
     void OnUndo(InputAction.CallbackContext context)
     {
-        if (!isMoving && !GameManager.Instance.CheckMovingObjects())
+        if ((!isMoving || !isAlive) && !GameManager.Instance.CheckMovingObjects())
         {
             GameManager.Instance.LoadPreviousState();
         }

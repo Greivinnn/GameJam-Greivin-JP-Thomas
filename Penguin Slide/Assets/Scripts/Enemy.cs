@@ -16,7 +16,6 @@ public class Enemy : MonoBehaviour
     Vector3 playerPosition = Vector3.zero;
     Vector3 attackDirection = Vector3.zero;
     bool lightningSpawned = false;
-    bool attackedThisFrame = false;
 
 
     void Awake()
@@ -39,9 +38,8 @@ public class Enemy : MonoBehaviour
                     SpawnLightningAttack();
                 }
                 player.OnEnemyHit();
-                animator.SetBool("IsAttacking", true);
-                attackedThisFrame = true;
-                
+                animator.SetBool("IsAttacking", true); 
+                lineRenderer.enabled = false;     
             }
 
             UpdateLineRenderer();
@@ -53,6 +51,7 @@ public class Enemy : MonoBehaviour
     {
         animator.SetBool("IsAttacking", false);
     }
+
     bool CheckSightLines()
     {
         Vector3 rayOrigin = transform.position;
@@ -160,6 +159,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("IsAlive", true);
             animator.Play("RobotIdleAnimation");
             lineRenderer.enabled = true;
+            lightningSpawned = false;
         }
     }
 }
