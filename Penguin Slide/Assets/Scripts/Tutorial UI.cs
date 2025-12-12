@@ -8,7 +8,7 @@ public class TriggerMessageFade : MonoBehaviour
 
     public float totalDuration = 6f;
     public float fadeDuration = 2f;
-    public string playerTag = "Player";
+    public string tagObject = "Player";
 
     bool hasTriggered = false;
     CanvasGroup canvasGroup;
@@ -41,7 +41,10 @@ public class TriggerMessageFade : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (hasTriggered) return;
-        if (!other.CompareTag(playerTag)) return;
+        if (!other.CompareTag(tagObject))
+        {
+            return;
+        }
 
         hasTriggered = true;
         StartCoroutine(ShowAndFadeRoutine());
