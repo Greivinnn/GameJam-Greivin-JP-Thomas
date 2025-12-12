@@ -7624,7 +7624,7 @@ Tilemap:
       - {fileID: 1287612312, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
       - {fileID: 2104215539, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
       - {fileID: -1636868567, guid: 5c50155ad35a7b74cba373900608daff, type: 3}
-      m_AnimationSpeed: 8.767966
+      m_AnimationSpeed: 7.242393
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -11641,6 +11641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4712052777565406598, guid: 7a1417b232b16904185f27dbefc66523, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 744332699}
     - target: {fileID: 6916765102210300877, guid: 7a1417b232b16904185f27dbefc66523, type: 3}
       propertyPath: m_Name
       value: EnemyCopy
