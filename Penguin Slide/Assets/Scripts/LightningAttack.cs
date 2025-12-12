@@ -35,10 +35,6 @@ public class LightningAttack : MonoBehaviour
 
         transform.localScale = new Vector3(0.2f * distance, 1f, 1f);
 
-        //// Scale the sprite to exactly match the distance
-        //// Since pivot is at center, scaling from center will reach both ends
-        //transform.localScale = new Vector3(distance / spriteWidth, transform.localScale.y, transform.localScale.z);
-
         isSetup = true;
     }
 }

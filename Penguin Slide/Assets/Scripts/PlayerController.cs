@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using NUnit.Framework;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,11 +12,11 @@ public class PlayerController : MonoBehaviour
 
     private PlayerInput input = null;
     private InputAction moveAction = null;
+    private InputAction undoAction = null;
     private Animator animator;
 
     private bool isOnIce = false;
     private List<Collider2D> floorsInContact = new List<Collider2D>();
-
 
     private bool isMoving;
     public bool IsMoving {get {return isMoving;}}
@@ -39,6 +40,7 @@ public class PlayerController : MonoBehaviour
         input = new PlayerInput();
         animator = GetComponent<Animator>();
         moveAction = input.Player.Move;
+        undoAction = input.UI.Undo;
 
         // Initialize animator to idle
         animator.SetFloat("MoveX", 0f);
@@ -46,18 +48,22 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsMoving", false);
         animator.SetBool("IsPushing", false);
         animator.SetBool("IsOnIce", false);
+
+        undoAction.performed += OnUndo;
     }
 
     void OnEnable()
     {
         input.Enable();
         moveAction.Enable();
+        undoAction.Enable();
     }
 
     void OnDisable()
     {
         input.Disable();
         moveAction.Disable();
+        undoAction.Disable();
     }
 
     void Update()
@@ -68,13 +74,17 @@ public class PlayerController : MonoBehaviour
 
             if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
             {
-                
+                GameManager.Instance.SaveGame();
                 ChangeDestination(moveInput);
+                if (transform.position == destination.position)
+                {
+                    
+                }
+                
             }
 
             //linearly moves the player to the destination
             transform.position = Vector3.MoveTowards(transform.position,destination.position,moveSpeed*Time.deltaTime);
-            
             //determine if the player is moving or stopped
             isMoving = !(transform.position == destination.position);
             if (!IsMoving)
@@ -93,7 +103,6 @@ public class PlayerController : MonoBehaviour
                     //this code runs when the player falls in water
                     animator.SetBool("IsFalling", true);
                     movingToWater = false;
-                    Debug.Log("You died");
                     isAlive = false;
                 }
             }
@@ -224,8 +233,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
- 
-
         return targetTile;
     }
 
@@ -241,6 +248,11 @@ public class PlayerController : MonoBehaviour
         {
             floorsInContact.Add(collision);
             isOnIce = false;
+        }
+        if (collision.gameObject.tag == "Key")
+        {
+            Key key = collision.gameObject.GetComponent<Key>();
+            GameManager.Instance.CollectKey(key);
         }
     }
     void OnTriggerExit2D(Collider2D collision)
@@ -261,6 +273,32 @@ public class PlayerController : MonoBehaviour
         GetComponent<Rigidbody2D>().position = position;
         animator.SetBool("IsAttacked", false);
         animator.SetBool("IsFalling", false);
+        movingToWater = false;
         isAlive = true;
+    }
+    public PlayerState GetPlayerData()
+    {
+        PlayerState playerState;
+        playerState.position = transform.position;
+        playerState.MoveX = animator.GetFloat("MoveX");
+        playerState.MoveY = animator.GetFloat("MoveY");
+        return playerState;
+    }
+    public void LoadState(PlayerState playerState)
+    {
+        Debug.Log("loaded player state");
+        Respawn(playerState.position);
+        animator.SetFloat("MoveX", playerState.MoveX);
+        animator.SetFloat("MoveY", playerState.MoveY);
+        spriteDirection.x = playerState.MoveX;
+        spriteDirection.y = playerState.MoveY;
+    }
+
+    void OnUndo(InputAction.CallbackContext context)
+    {
+        if ((!isMoving || !isAlive) && !GameManager.Instance.CheckMovingObjects())
+        {
+            GameManager.Instance.LoadPreviousState();
+        }
     }
 }
