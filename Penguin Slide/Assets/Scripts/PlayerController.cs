@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     private PushableObject pushableAtDestination = null; 
     Vector3 pushDirection = Vector3.zero;
 
+    private Door doorAtDestination = null;
+
     private Vector2 spriteDirection = Vector2.down;
 
     void Awake()
@@ -75,12 +77,7 @@ public class PlayerController : MonoBehaviour
             if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
             {
                 GameManager.Instance.SaveGame();
-                ChangeDestination(moveInput);
-                if (transform.position == destination.position)
-                {
-                    
-                }
-                
+                ChangeDestination(moveInput);               
             }
 
             //linearly moves the player to the destination
@@ -97,6 +94,20 @@ public class PlayerController : MonoBehaviour
                     pushDirection = Vector3.zero;
                     isPushing = true;
                     
+                }
+                if(doorAtDestination != null)
+                {
+                    int doorID = doorAtDestination.DoorID;
+                    foreach (Key key in GameManager.Instance.keysHeld)
+                    {
+                        if (key.DoorUnlockID == doorID)
+                        {
+                            GameManager.Instance.keysHeld.Remove(key);
+                            doorAtDestination.Unlock();
+                            break;
+                        }
+                    }
+                    doorAtDestination = null;
                 }
                 if (movingToWater)
                 {
@@ -181,6 +192,10 @@ public class PlayerController : MonoBehaviour
                 pushableAtDestination = wallHit.collider.GetComponent<PushableObject>();
                 pushDirection = direction;
             }
+            else if (wallHit.collider.tag == "Door")
+            {
+                doorAtDestination = wallHit.collider.GetComponent<Door>();
+            }
         }
         if (floorHit.collider != null)
         {
@@ -222,6 +237,7 @@ public class PlayerController : MonoBehaviour
                 //do not push if moving to a floor tile
                 pushableAtDestination = null; 
                 pushDirection = Vector3.zero;
+                doorAtDestination = null;
 
                 if (isCheckpointTile)
                 {

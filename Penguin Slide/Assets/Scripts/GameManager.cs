@@ -27,7 +27,10 @@ public class GameManager : MonoBehaviour
     private List<Vector3> enemySpawnPositions = new List<Vector3>(); 
     [SerializeField] private GameObject enemyPrefab;
 
-    List<Key> keysHeld = new List<Key>();
+    public List<Key> keysHeld = new List<Key>();
+
+    [SerializeField] private GameObject doorsParent;
+    private List<Door> doors = new List<Door>();
 
     private List<SaveState> previousStates = new List<SaveState>();
     private int maxStepsSaved = 100;
@@ -38,8 +41,6 @@ public class GameManager : MonoBehaviour
     private PlayerInput input = null;
     private InputAction restartAction = null;
 
-    private int keyAmount = 0;
-    public int KeyAmount {get{return keyAmount;} set{keyAmount=value;}}
 
     void Awake()
     {
@@ -62,6 +63,13 @@ public class GameManager : MonoBehaviour
             enemies.Add(enemy);
             enemySpawnPositions.Add(enemy.transform.position);
         }
+
+        Door[] newDoors = doorsParent.GetComponentsInChildren<Door>();
+        foreach(Door door in newDoors)
+        {
+            doors.Add(door);
+        }
+
         spawnPos = player.transform.position;
         restartAction.performed += OnRestart;
     }
@@ -185,7 +193,11 @@ public class GameManager : MonoBehaviour
             saveState.pushables.Add(pushable.GetPushableData());
         }
         saveState.keysHeld = keysHeld;
-
+        saveState.doors = new List<bool>();
+        foreach(Door door in doors)
+        {
+            saveState.doors.Add(door.Unlocked);
+        }
 
         bool isNewState = false;
         if (previousStates.Count == 0)

@@ -7,7 +7,7 @@ public struct SaveState
     public List<EnemyState> enemies;
     public List<PushableState> pushables;
     public List<Key> keysHeld;
-    //public List<DoorState> doors;
+    public List<bool> doors;
 }
 
 public struct PlayerState
@@ -31,9 +31,4 @@ public struct EnemyState
     public bool isAlive;
 }
 
-public struct DoorState
-{
-    bool IsOpen;
-    int doorID;
-}
 
