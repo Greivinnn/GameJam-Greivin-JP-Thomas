@@ -8,6 +8,7 @@ public struct SaveState
     public List<PushableState> pushables;
     public List<Key> keysHeld;
     public List<bool> doors;
+    public List<KeyState> keys;
 }
 
 public struct PlayerState
@@ -31,4 +32,8 @@ public struct EnemyState
     public bool isAlive;
 }
 
-
+public struct KeyState
+{
+    public bool collected;
+    public bool used;
+}

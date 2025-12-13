@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography;
 using NUnit.Framework;
 using Unity.Mathematics;
 using Unity.VisualScripting;
@@ -31,6 +32,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject doorsParent;
     private List<Door> doors = new List<Door>();
+
+    [SerializeField] private GameObject keysParent;
+    private List<Key> keys = new List<Key>();
 
     private List<SaveState> previousStates = new List<SaveState>();
     private int maxStepsSaved = 100;
@@ -68,6 +72,12 @@ public class GameManager : MonoBehaviour
         foreach(Door door in newDoors)
         {
             doors.Add(door);
+        }
+
+        Key[] newKeys = keysParent.GetComponentsInChildren<Key>();
+        foreach(Key key in newKeys)
+        {
+            keys.Add(key);
         }
 
         spawnPos = player.transform.position;
@@ -140,10 +150,6 @@ public class GameManager : MonoBehaviour
             enemy.player = player;
             enemies.Add(enemy);
         }
-        foreach (Key key in keysHeld)
-        {
-            key.enabled = true;
-        }
     }
 
     void OnRestart(InputAction.CallbackContext context)
@@ -192,11 +198,22 @@ public class GameManager : MonoBehaviour
         {
             saveState.pushables.Add(pushable.GetPushableData());
         }
-        saveState.keysHeld = keysHeld;
+
+        saveState.keysHeld = new List<Key>();
+        foreach (Key key in keysHeld)
+        {
+            saveState.keysHeld.Add(key);
+        }
+
         saveState.doors = new List<bool>();
         foreach(Door door in doors)
         {
             saveState.doors.Add(door.Unlocked);
+        }
+        saveState.keys = new List<KeyState>();
+        foreach(Key key in keys)
+        {
+            saveState.keys.Add(key.GetState());
         }
 
         bool isNewState = false;
@@ -231,6 +248,16 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < previousState.enemies.Count; i++)
             {
                 enemies[i].LoadState(previousState.enemies[i]);
+            }
+
+            for (int i = 0; i < previousState.doors.Count; i++)
+            {
+                doors[i].LoadState(previousState.doors[i]);   
+            }
+
+            for (int i = 0; i < previousState.keys.Count; i++)
+            {
+                keys[i].LoadState(previousState.keys[i]);
             }
             keysHeld = previousState.keysHeld;
             previousStates.RemoveAt(previousStates.Count-1);

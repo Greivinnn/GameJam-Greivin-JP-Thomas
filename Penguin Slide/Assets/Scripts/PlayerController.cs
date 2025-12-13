@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
                     {
                         if (key.DoorUnlockID == doorID)
                         {
+                            key.Used = true;
                             GameManager.Instance.keysHeld.Remove(key);
                             doorAtDestination.Unlock();
                             break;
