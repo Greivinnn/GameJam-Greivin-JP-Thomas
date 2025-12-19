@@ -70,9 +70,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Vector2 moveInput = moveAction.ReadValue<Vector2>();
         if (isAlive)
         {
-            Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
             if (destination.position == transform.position && moveInput != Vector2.zero && !GameManager.Instance.CheckMovingObjects())
             {
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
                     isAlive = false;
                 }
             }
-            animator.SetBool("IsMoving", isMoving);
+            animator.SetBool("IsMoving", isMoving || (moveInput.magnitude != 0 && !GameManager.Instance.CheckMovingObjects()));
             animator.SetBool("IsPushing", isPushing);
             animator.SetBool("IsOnIce", isOnIce);
             animator.SetFloat("MoveX",spriteDirection.x);
