@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f710ba6b98b15164bb6f3ca814ce65d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  sightDistance: 20
+  sightDistance: 100
   player: {fileID: 0}
   lightningPrefab: {fileID: 4282226690399328331, guid: 2f3a87ecbe781bd44a806610f24008f1, type: 3}
   lightningSpawnPoint: {fileID: 4795265653377196478}
