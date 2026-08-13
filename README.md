@@ -21,7 +21,7 @@ Penguin Slide combines grid-based sokoban puzzle mechanics with a stealth twist:
 
 ## 👥 Team
 
-Built in 1 month by a team of 3 as a game jam project.
+Built in 1 month by a team of 3 as a class project.
 
 ## ▶️ How to Play
 
