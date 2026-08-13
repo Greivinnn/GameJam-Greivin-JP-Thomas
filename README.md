@@ -1,6 +1,6 @@
 # 🐧 Penguin Slide
 
-A tile-based puzzle game where you slide across ice, push rocks to block enemy sightlines, and sink obstacles into water to cross safely — built in **1 month** by a team of 3 for a game jam.
+A tile-based puzzle game where you slide across ice, push rocks to block enemy sightlines, and sink obstacles into water to cross safely — built in **1 month** by a team of 3 for a class project.
 
 ## 🎮 Overview
 
